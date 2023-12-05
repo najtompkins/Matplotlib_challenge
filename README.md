@@ -4,6 +4,7 @@ Nathan-Andrew Tompkins
 - A folder of data analyized for the drug trials, along with the cleaned version of those combined .csv files.
 - An "images" folder which contains the visualizations for the analysis.
 - The .ipynb file used to process the analysis using the Matplotlib python library.
+  - Includes functions to analyze each study participant by ID. 
 - An analysis report as a .docx file which contains all findings during the analysis.
 
 ### Citations
