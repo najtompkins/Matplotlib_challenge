@@ -1,13 +1,67 @@
-# Matplotlib_code
-Nathan-Andrew Tompkins
-## This repo contains:
-- A folder of data analyized for the drug trials, along with the cleaned version of those combined .csv files.
-- An interactive Tableau Workbook (regimen_analysis.twbx) for greater visualization and exploration of the data than Matplotlib coulod provide 
-  - (Tableau Public link: https://public.tableau.com/app/profile/nathan.andrew.tompkins/viz/MouseAnalysis/StudyAnalysis?publish=yes)
-- An "images" folder which contains the visualizations for the analysis generated using Matplotlib and used in the .docx analysis mentioned below.
-- The .ipynb file used to process the analysis using the Matplotlib Python library.
-  - Includes custom functions to analyze each study participant by ID. 
-- An analysis report as a .docx file which contains all findings during the analysis.
+# Pharmaceutical Regimen Analysis
 
-### Citations
-Project instructions and starter code provided by UCF as part of their 2023 Data Analytics Bootcamp. Further analysis added by myself.
+<!-- **By: Nathan-Andrew Tompkins** -->
+
+The purpose of this analysis is to clean [two .csv files](data) and explore the [combined data](data/cleaned_data/cleaned_data.csv) containing treatment records for nearly 250 mice using tools such as Python's **Matplotlib** and Salesforce's **Tableau** for visualization of the data.
+
+*Note:*<br>
+*Throughout this analysis the two starting datasets [Mouse_metadata.csv](data/Mouse_metadata.csv) and [Study_results.csv](data/Study_results.csv) were found to contain anomolies that proved them to contain generated data for the purpose of analysis instead of true data. Details for this discovery are detailed below in the **Generated Data Analysis** header. The rest of the analysis was performed with this in mind.*
+
+# Tableau Workbook Access
+For an interactive Tableau Story of this analysis, click [here](https://public.tableau.com/app/profile/nathan.andrew.tompkins/viz/regimen_analysis/StudyAnalysis?publish=yes)
+<br>
+For the Tableau workbook download, click [here](regimen_analysis.twbx)
+
+## Study Overview
+- **Number of drugs** considered in this analysis: **9 + Placebo**
+- **Drug names**: *Capomulin, Ketapril, Naftisol, Infubinol, Stelasyn, Ramicane, Zoniferol, Propriva, Ceftamin* + *Placebo*
+- **Total number of records before cleaning:** 1893
+- **Total number of records after cleaning:** 1880
+- **Initial mice recorded:** 249
+- **Mice analyzed once data was cleaned:** 248
+- **Most observed drugs:** Capomulin (12.2% of records), Ramicane (12.1% of records)
+- **Mouse gender distribution (full study):** Male: 51%, Female: 49%
+- **Avg. Weight/Tumor Volume Correlation Coefficient:** 0.84
+
+## Observations
+1. An analysis of the final tumor volumes reveals the overall effects of the study on the treated mice. Namely: the **Capomulin** and **Ramicane** regimens recorded the lowest results across the entire study, having roughly equal effectiveness on lowering tumor volume by the end of the trial (timepoint 45). *No other drug regimen indicated a significant reduction or reversal of tumor volume than these two.*
+![Final Tumor Outliers](images/tableau_charts/final_tumor_results.png)
+3. Despite the gender distribution for the full study being roughly equal, the individual regimens varied greatly in this. *The top-performing drugs (Capomulin and Ramicane) do not seem to be affected by this variance, as the gender distributions were 23.3% higher in female and 108.1% higher in male, respectively, while revealing the same effectiveness noted in observation 1.*
+![Gender Distribution (Full Study)](images/tableau_charts/gender_dist_bar.png) <br>
+![Gender Distribution (Full Study)](images/tableau_charts/gender_dist_pie.png)
+4. It should be noted that the studies comprised of the most mice resulted in the most successful regimens studied, as these **collectively** contained 18.5% *more* mice than the next two regimens by count. *The effectiveness of the Capomulin and Ramicane regimens against the other 8, when found to contain a greater percentage of mice, could indicate further study.*
+![Mice (Per Trial)](images/tableau_charts/mice_per_study.png)
+2. A weight/tumor-size regression analysis proves that by the end of this study these two variables are highly correlated for both the Capomulin and Ramicane Regimen. The Correlation Coefficient for these variables are calculated as 0.84, and 0.81 respectively. *A high-positive correlation-coefficient means that as of the end-point of this study: as weight increases, tumor volume will also increase.*
+![Tumor Weight/Volume Regression – Mouse ID: L509 – Capomulin](images/capomulin_CC.png) <br>
+![Tumor Weight/Volume Regression – Mouse ID: L509 – Capomulin](images/ramicane_CC.png)
+
+## Summary
+The two regimen, Ramicane and Capomulin, show the most promise in treating tumors in mice. Despite the gender distributions for these two studies varying greatly, they both acheived similar results, which is a significant reduction in tumor size.
+
+## Generated Data Analysis
+While performing this analysis I found anomolies in the data indicate the initial CSV files are generated for the use of analysis, not true data.
+1. Proof #1: All Tumor Weights begin at 45mmg. <br>
+Every mouse in these datasets indicate a starting tumor-volume as 45mmg. There is no study where this would be true UNLESS each mouse was selected based on their tumor size, and this is not indicated by the recording processes of the study. <br>
+![AGE INTEGER SCREENSHOT](images/tableau_charts/tumor_weights.png)
+2. Proof #2: Imprecise and Un-Varying Weight Measurements: <br> 
+In a pharmaceutical study such as this the measurement of weight would include a higher precision than what is revealed in the data. **These values, recorded in grams, should include a more precise decimal value** if mice (a particualarly small animal where weight variances are of much greater importance) are to be studied. <br>
+![WEIGHT AMOUNT SCREENSHOT](images/tableau_charts/mouse_weights.png) <br>
+Even more telling: the lack of variance in *any* mouse's recorded weight is why this is cause for alarm. <br>
+![AGE INTEGER SCREENSHOT](images/tableau_charts/recorded_weights.png)
+3. Proof #3: Imprecise and Un-Varying Age Measurements: <br> 
+Without repeating the above: the lifespan of a mouse is short and thus age should be recorded in increments of greater precision than "months". <br>
+![AGE AMOUNT SCREENSHOT](images/tableau_charts/unique_ages.png) <br>
+While this is not an imedidate indicator of generated data, the lack of variance in *any* mouse's recorded age is why this is cause for alarm. <br>
+![AGE INTEGER SCREENSHOT](images/tableau_charts/recorded_ages.png) <br>
+
+
+
+
+<!-- ## Appendix -->
+<!-- - **Chart 1:** Mice (Per Trial) -->
+<!-- - **Chart 2:** [Image/Description] -->
+<!-- - **Chart 3:** Gender Distribution (Full Study) -->
+<!-- - **Chart 4:** ![Final Tumor Outliers]() -->
+<!-- - **Chart 5:** Tumor Volume (3mm) Timeline – Mouse ID: L509 – Capomulin -->
+<!-- - **Chart 6:** Tumor Weight/Volume Scatter – Mouse ID: L509 – Capomulin -->
+<!-- - **Chart 7:** Tumor Weight/Volume Regression – Mouse ID: L509 – Capomulin -->
