@@ -24,17 +24,19 @@ For the Tableau workbook download, click [here](regimen_analysis.twbx)
 - **Avg. Weight/Tumor Volume Correlation Coefficient:** 0.84
 
 ## Observations
-1. An analysis of the final tumor volumes reveals the overall effects of the study on the treated mice. Namely: the **Capomulin** and **Ramicane** regimens recorded the lowest results across the entire study, having roughly equal effectiveness on lowering tumor volume by the end of the trial (timepoint 45). *No other drug regimen indicated a significant reduction or reversal of tumor volume than these two.* <br> (*For information regarding **initial tumor-volume** analysis, see the Generated Data Analysis header below*)
+1. An analysis of the final tumor volumes reveals the overall effects of the study on the treated mice. Namely: the **Capomulin** and **Ramicane** regimens recorded the lowest results across the entire study, having roughly equal effectiveness on lowering tumor volume by the end of the trial (timepoint 45). *No other drug regimen indicated a significant reduction or reversal of tumor volume than these two.* <br> (*For information regarding **initial tumor-volume** analysis, see the Generated Data Analysis header below*) <br>
+![Final Tumor Outliers](images/tableau_charts/final_tumor_results.png) <br>
 
-![Final Tumor Outliers](images/tableau_charts/final_tumor_results.png)
-2. Despite the gender distribution for the full study being roughly equal, the individual regimens varied greatly in this. *The top-performing drugs (Capomulin and Ramicane) do not seem to be affected by this variance, as the gender distributions were 23.3% higher in female and 108.1% higher in male, respectively, while revealing the same effectiveness noted above.*
+2. Despite the gender distribution for the full study being roughly equal, the individual regimens varied greatly in this. *The top-performing drugs (Capomulin and Ramicane) do not seem to be affected by this variance, as the gender distributions were 23.3% higher in female and 108.1% higher in male, respectively, while revealing the same effectiveness noted above.*  <br>
 ![Gender Distribution (Full Study)](images/tableau_charts/gender_dist_bar.png) <br>
-![Gender Distribution (Full Study)](images/tableau_charts/gender_dist_pie.png)
-3. It should be noted that the studies comprised of the most mice resulted in the most successful regimens studied, as these **collectively** contained 18.5% *more* mice than the next two regimens by count. *The effectiveness of the Capomulin and Ramicane regimens against the other 8, when found to contain a greater percentage of mice, could indicate further study.*
-![Mice (Per Trial)](images/tableau_charts/mice_per_study.png)
+![Gender Distribution (Full Study)](images/tableau_charts/gender_dist_pie.png) <br>
+
+3. It should be noted that the studies comprised of the most mice resulted in the most successful regimens studied, as these **collectively** contained 18.5% *more* mice than the next two regimens by count. *The effectiveness of the Capomulin and Ramicane regimens against the other 8, when found to contain a greater percentage of mice, could indicate further study.*  <br>
+![Mice (Per Trial)](images/tableau_charts/mice_per_study.png) <br>
+
 4. A weight/tumor-size regression analysis proves that by the end of this study these two variables are highly correlated for both the Capomulin and Ramicane Regimen. The Correlation Coefficient for these variables are calculated as 0.84, and 0.81 respectively. *A high-positive correlation-coefficient means that as of the end-point of this study: as weight increases, tumor volume will also increase.*
 ![Tumor Weight/Volume Regression – Mouse ID: L509 – Capomulin](images/capomulin_CC.png) <br>
-![Tumor Weight/Volume Regression – Mouse ID: L509 – Capomulin](images/ramicane_CC.png)
+![Tumor Weight/Volume Regression – Mouse ID: L509 – Capomulin](images/ramicane_CC.png) <br>
 
 ## Summary
 * The two regimen, Ramicane and Capomulin, show the most promise in treating tumors in mice. Despite the gender distributions for these two studies varying greatly, as well as the count distribution variance, they both achieved similar results, which is a significant reduction in tumor size.
