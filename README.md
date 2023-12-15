@@ -2,7 +2,7 @@
 
 <!-- **By: Nathan-Andrew Tompkins** -->
 
-The purpose of this analysis is to clean [two .csv files](data) and explore the [combined data](data/cleaned_data/cleaned_data.csv), which contains treatment records for nearly 250 mice. Tools such as Python's **Matplotlib** and Salesforce's **Tableau** were utilized for visualization of the data.
+The purpose of this analysis is to clean [two .csv files](data) and explore the [combined data](data/cleaned_data/cleaned_data.csv), which contains treatment records for nearly 250 mice. Data cleaning was performed using Python in [this .ipynb notebook](matplotlib_pharmaceuticals_analysis.ipynb) and tools such as the **Matplotlib** Python module and Salesforce's **Tableau** were utilized for visualization of the data.
 
 *Note:*<br>
 *This analysis was performed as part of the 2023 UCF Data Analytics and Visualization Bootcamp. The two starting datasets [Mouse_metadata.csv](data/Mouse_metadata.csv) and [Study_results.csv](data/Study_results.csv) were found to contain anomolies that proved them as generated data for the purpose of analysis instead of true data. While the data generator is cited (mockaroo.com) in the documentation of the assignment, I was unaware of this. My discovery of anomalies in the data are detailed below in the **Generated Data Analysis** header. The rest of the analysis was performed as if this data were true.*
