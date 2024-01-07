@@ -1,10 +1,13 @@
 # Pharmaceutical Regimen Analysis
+<img align="right" src="https://www.thesprucepets.com/thmb/dZkkUfHSfoqm3cfShf3XSQHWhrw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-590483026-5830cf475f9b58d5b17e8149.jpg" alt="Your Alt Text" align="right" width="30%" height="30%">
+
 ### Visit this Project's Repository Here: [najtompkins/pharmaceutical_regimen_analysis](https://github.com/najtompkins/pharmaceutical_regimen_analysis)
 #### Interact with the Tableau Public Story for this Analysis Here: [Tableau Public Story](https://public.tableau.com/app/profile/nathan.andrew.tompkins/viz/regimen_analysis/StudyAnalysis?publish=yes)
 #### Download the Tableau Public workbook: [here](regimen_analysis.twbx)
 
 <!-- **By: Nathan-Andrew Tompkins** -->
 ## Project Overview
+<img align="right" src="https://tdan.com/wp-content/uploads/2019/07/ART03x-edited-feature-image.png" alt="Your Alt Text" align="right" width="30%" height="30%"> <br>
 The purpose of this analysis is to prove proficiency in Pandas and Tableau Public by cleaning and joining [two .csv files](data),  explore the [combined data](data/cleaned_data/cleaned_data.csv), and handle the new dataset which contains treatment records for nearly 250 mice. Data cleaning was performed using Python in [this](matplotlib_pharmaceuticals_analysis.ipynb) .ipynb notebook and tools such as the **Matplotlib and Pandas** Python modules and Salesforce's **Tableau Public** were utilized for visualization of the study data.
 
 *Note:*<br>
