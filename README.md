@@ -1,16 +1,16 @@
 # Pharmaceutical Regimen Analysis
+### Visit this Project's Repository Here: [najtompkins/pharmaceutical_regimen_analysis](https://github.com/najtompkins/pharmaceutical_regimen_analysis)
+#### Interact with the Tableau Public Story for this Analysis Here: [Tableau Public Story](https://public.tableau.com/app/profile/nathan.andrew.tompkins/viz/regimen_analysis/StudyAnalysis?publish=yes)
+#### Download the Tableau Public workbook: [here](regimen_analysis.twbx)
 
 <!-- **By: Nathan-Andrew Tompkins** -->
-
-The purpose of this analysis is to clean [two .csv files](data) and explore the [combined data](data/cleaned_data/cleaned_data.csv), which contains treatment records for nearly 250 mice. Data cleaning was performed using Python in [this](matplotlib_pharmaceuticals_analysis.ipynb) .ipynb notebook  and tools such as the **Matplotlib** Python module and Salesforce's **Tableau** were utilized for visualization of the data.
+## Project Overview
+The purpose of this analysis is to prove proficiency in Pandas and Tableau Public by cleaning and joining [two .csv files](data),  explore the [combined data](data/cleaned_data/cleaned_data.csv), and handle the new dataset which contains treatment records for nearly 250 mice. Data cleaning was performed using Python in [this](matplotlib_pharmaceuticals_analysis.ipynb) .ipynb notebook and tools such as the **Matplotlib and Pandas** Python modules and Salesforce's **Tableau Public** were utilized for visualization of the study data.
 
 *Note:*<br>
-*This analysis was performed as part of the 2023 UCF Data Analytics and Visualization Bootcamp. The two starting datasets [Mouse_metadata.csv](data/Mouse_metadata.csv) and [Study_results.csv](data/Study_results.csv) were found to contain anomolies that proved them as generated data for the purpose of analysis instead of true data. While the data generator is cited (mockaroo.com) in the documentation of the assignment, I was unaware of this. My discovery of anomalies in the data are detailed below in the **Generated Data Analysis** header. The rest of the analysis was performed as if this data were true.*
+*This analysis was performed as part of the 2023 UCF Data Analytics and Visualization Bootcamp. The two starting datasets [Mouse_metadata.csv](data/Mouse_metadata.csv) and [Study_results.csv](data/Study_results.csv) were found to contain anomolies that proved them as generated data for the purpose of analysis instead of true data. While the data generator is cited (mockaroo.com) in the documentation of the assignment, I was unaware of this at the time of analysis. My discovery of anomalies in the data are detailed below in the **Generated Data Analysis** header. The rest of the analysis was performed as if this data were true.*
 
-# Tableau Workbook Access
-For an interactive Tableau Story of this analysis, click [here](https://public.tableau.com/app/profile/nathan.andrew.tompkins/viz/regimen_analysis/StudyAnalysis?publish=yes)
-<br>
-For the Tableau workbook download, click [here](regimen_analysis.twbx)
+
 
 ## Study Overview
 - **Number of drugs** considered in this analysis: **9 + Placebo**
